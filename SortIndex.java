@@ -10,8 +10,11 @@
 2. 주어진 배열 .sort 메서드로 오름차순 정렬
 3. 오름차순으로 정렬된 결과 값을 순서대로 읽을 루프문 작성 
 3.1 해당 루프문에서 map이 가지고 있는 index값을 answer값으로 대체
- 
+
+결과 : > 정답처리 
+추가 해결: 해답을 보니 HashMap을 활용하지 않아도 좀더 간결하게 코드작성 가능, > 단순 인덱스값만으로 문제해결 가능 기존 코드 아래에 추가
 */
+//기존문제 해결코드
 import java.util.HashMap;
 import java.util.Arrays;
 class Solution {
@@ -27,4 +30,18 @@ class Solution {
         }
         return answer;
     }
+}
+//해답에서 사용한 해결코드
+import java.util.Arrays;
+class Solution{
+  public Integer[] solution(int[] arr)}{
+    Integer[] answer = new Integer[arr.length];
+    for(int i=0;i<answer.length;i++){
+      answer[i]=i;
+    }
+    Arrays.sort(answer,(a,b)->{
+     return arr[a]-arr[b]
+    });
+    return answer;
+  }
 }
